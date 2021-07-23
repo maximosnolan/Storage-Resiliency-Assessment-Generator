@@ -561,16 +561,19 @@ def main():
     add_footer(document, victim_company)
     print("Formating text and tables...")
     change_intro(document, victim_company)
-    num_to_pull = 4 #set to determine how many catagories are in executive summary 
+    num_to_pull = 4 #set to determine how many catagories are in executive summary reccoemdations
     print("adding insights...")
     insights(document= document, number = 6,insight_type=  "Ransom",final_scores= final_scores, num_to_pull= num_to_pull)
     insights(document= document, number = 9,insight_type= "Executive", final_scores =final_scores, num_to_pull= num_to_pull)
     #pull_image() WIP, will revisit later
     print("Compilation process completed in: ",  time.time() - start_time, " seconds.")
-    document_name =  victim_company.company_name + " CRAT Assessment--Final.docx"
-    print("New document saved as:", 'test')
-    document.save('test')
-    os.system('start test')
+    document_name =  victim_company.company_name + "CRAT_Assessment--Final.docx"
+    print(document_name)
+    print("New document saved as:", document_name)
+    document.save(document_name)
+    open = 'start ' + document_name
+    os.system(open)
+    #F = open(document_name, "w")
     return
 
 if __name__ == "__main__":
