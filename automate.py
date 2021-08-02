@@ -44,7 +44,7 @@ class company:
 major_reccomendation = [] #major recomendations
 minor_reccomendation = [] #minor recomendations
 final_scores = {} #scores of % achieved, hash map which maps the name of the metric to the score achieved
-num_rows = 60
+num_rows = 100
 
 def get_information():
     df = pandas.read_excel('CRAT_example.xlsx', sheet_name= 'Customer Basic Information')
