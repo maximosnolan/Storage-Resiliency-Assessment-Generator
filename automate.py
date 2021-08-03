@@ -1,25 +1,15 @@
 from docx import Document
 from numpy import NaN
 import pandas
-import csv
 import time
-import PIL
-from PIL import ImageGrab, Image
 from docx.shared import Cm, Pt, RGBColor
-import os
-import sys
 from copy import deepcopy
 from pandas.io import excel
 from multiprocessing import Pool
 from docx.oxml.ns import nsdecls
 from docx.oxml import parse_xml
-import glob
 from docx.enum.text import WD_ALIGN_PARAGRAPH
-from PIL import ImageGrab
-import win32com.client as win32
-from win32com.client import Dispatch
-import os
-from PIL import Image
+
 
 class Recomendation:
     def __init__(self, importance, recommendation, framework, rank, cat, cat_rank):
@@ -571,8 +561,8 @@ def main():
     print(document_name)
     print("New document saved as:", document_name)
     document.save(document_name)
-    open = 'start ' + document_name
-    os.system(open)
+    #open = 'start ' + document_name
+    #os.system(open)
     #F = open(document_name, "w")
     return
 
